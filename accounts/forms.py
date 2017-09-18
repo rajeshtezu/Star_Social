@@ -5,7 +5,7 @@ class UserCreateForm(UserCreationForm):
     
     class Meta:
         fields = ('username', 'email', 'password1', 'password2')
-        model = get_user_model()
+        model = get_user_model()  # Returns the User model that is  currently active in this project.
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
