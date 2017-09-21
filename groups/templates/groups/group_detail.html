@@ -22,7 +22,7 @@
         	<h1> No posts in this group yet! </h1>
         {% else %}
         	{% for post in group.posts.all %}
-        		{% include "posts/_posts.html" %}
+        		{% include "posts/_post.html" %}
         	{% endfor %}
         {% endif %}
 	</div>
