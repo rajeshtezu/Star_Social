@@ -25,7 +25,7 @@ SECRET_KEY = 'ezvxhvceqout#$c7wfpbfqsqds3lpp6y-ib90w1qk8my#&45!+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['c029hkwn.apps.lair.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition

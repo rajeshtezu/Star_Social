@@ -48,7 +48,7 @@ class PostDetail(SelectRelatedMixin, generic.DeleteView):
 
 class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     fields = ('message', 'group')
-    model = Post
+    model = models.Post
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -57,7 +57,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
         return super().form_valid(form)
 
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
-    model = Post
+    model = models.Post
     select_related = ('user', 'group')
     success_url = reverse_lazy('posts:all')
 
